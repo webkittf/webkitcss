@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
+<title>마스크를 이용한 프로필 페이지</title>
+<style>
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
+margin:0;
+padding:0;
+font-family:Helvetica
+}
+body,input,textarea,select,button,table{
+font-size:14px;
+line-height:1.25em
+}
+body{
+position:relative;
+-webkit-text-size-adjust:none
+}
+img,fieldset{
+border:0
+}
+ul,ol{
+list-style:none
+}
+em,address{
+font-style:normal
+}
+a{
+text-decoration:none
+}
+table{
+border-collapse:collapse
+}
+hr{
+display:none !important
+}
+
+/* layout */
+html,body{height:100%}
+.my{
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-box-align:center;
+position:absolute;
+top:0;
+width:100%;
+padding:10px 0;
+z-index:1;
+}
+.my .profile_picture{
+width:105px;
+height:105px;
+-webkit-mask-image:url(img/profile_mask.png);
+-webkit-mask-size:105px
+}
+.my h1 .name,
+.my h1 .nickname{
+display:block;
+text-align:center;
+}
+.my h1 .name{
+font-size:18px;
+line-height:17px;
+margin-bottom:5px
+}
+.my h1 .nickname{
+font-size:13px;
+font-weight:normal;
+}
+.info {
+text-align:center
+}
+.info h2{
+padding:180px 0 10px
+}
+
+@media only screen and (orientation:landscape){
+	.my{
+	height:150px;
+	-webkit-box-orient:horizontal;
+	-webkit-box-pack:center
+	}
+}
+</style>
+</head>
+<body>
+<div class="my">
+	<div class="profile_picture"><img src="img/baby.png" width="105" height="105" alt=""></div>
+	<h1><strong class="name">엘리스</strong><span class="nickname">sunney</span></h1>
+</div>
+<div class="info">
+	<h2>나의 신상</h2>
+	<p>나는 다섯살 입니다.</p>
+	<p>나는 사랑스런 여자입니다.</p>
+	<p>나는 한국에 살아요.</p>
+	<p>나는 핑크색을 좋아해요.</p>
+</div>
+</div>
+</body>
+</html>

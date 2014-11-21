@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
+<title>데이터 테이블의 소팅기능 만들기</title>
+<style>
+/* common */
+html,body{height:100%}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button{font-size:14px;line-height:1.25em}
+img,fieldset{border:0}
+ul,ol,li{list-style:none}
+
+/* Chinese restaurant menu table */
+.floating_menu{z-index:10;position:fixed;width:100%;padding-top:5px;background:#fff}
+.floating_menu button{padding:5px}
+.menu_table{position:relative;height:36px;margin-top:5px;margin-bottom:-1px;background:#03091C;font-weight:bold;color:#FCFEFF;text-align:center}
+.menu_table a{color:#D7FFDD}
+.menu_data{padding-top:73px}
+.menu_data a{color:#506dff}
+.menu_data li{position:relative;height:36px;margin-bottom:-1px;background:##D0D1D4;text-align:center}
+.menu_data li a{color:inherit;text-decoration:none}
+.num,.category,.menu,.prize,.time,.top{position:absolute;top:0;height:24px;padding-top:10px;border:1px solid #f2f2f2}
+.num{top:0;left:0;width:40px}
+.category{left:41px;width:180px}
+.top{right:0;width:50px}
+.time{right:51px;width:80px}
+.prize{right:132px;width:80px}
+.menu{position:static;display:block;padding:10px 212px 0 232px;text-align:left}
+.menu_table .menu{text-align:center}
+</style>
+</head>
+<body>
+<div class="floating_menu">
+    <button id="sortOpt1">내림차순</button>
+    <button id="sortOpt2">오름차순</button>
+    <div class="menu_table">
+        <span class="num"><a href="#">번호</a></span>
+	      <span class="category">카테고리</span>
+	      <span class="menu">메뉴명</span>
+	      <span class="prize"><a href="#">가격</a></span>
+        <span class="time"><a href="#">소요시간</a></span>
+	      <span class="top"><a href="#">인기순</a></span>
+    </div>
+</div>
+<ul class="menu_data">
+<li>
+    <span class="num" title="메뉴 번호">1</span>
+    <span class="category" title="카테고리"><a href="#">밥류</a></a></span>
+    <span class="menu" title="메뉴명"><a href="#">볶음밥</a></span>
+    <span class="prize" title="가격">6,000원</span>
+    <span class="time" title="소요시간">15분</span>
+    <span class="top" title="인기순">110</span>
+</li>
+...
+<ul>
+</body>
+</html>

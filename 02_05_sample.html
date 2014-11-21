@@ -1,0 +1,101 @@
+<html lang="ko">
+<head>
+<title>세로 막대그래프 만들기</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<style type="text/css" >
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
+margin:0;
+padding:0;
+font-family:Helvetica
+}
+body,input,textarea,select,button,table{
+font-size:14px;
+line-height:1.25em
+}
+body{
+position:relative;
+-webkit-text-size-adjust:none
+}
+img,fieldset{
+border:0
+}
+ul,ol{
+list-style:none
+}
+em,address{
+font-style:normal
+}
+a{
+text-decoration:none
+}
+table{
+border-collapse:collapse
+}
+hr{
+display:none !important
+}
+
+/* css bar graph */
+.graph_area{ 
+    position:relative;
+    margin-top:50px;
+    padding:0 10px 0 40px;  
+}
+.graph{
+    display: -webkit-flex;
+    -webkit-align-items:flex-end;
+    -webkit-justify-content: space-around;
+     height:200px;
+     border:1px solid #000;
+     border-bottom:2px solid  #000 ;
+     border-left:2px solid   #000;
+     background:url(img/bg_bar_graph.gif) repeat-x;
+}
+.bar{
+    width:30px;
+    background-color:#000;
+    opacity:0.9;
+    text-align:center;
+}
+.x-axis{
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+}
+.y-axis{
+    position:absolute;
+    top:-5px;
+    left:10px;
+    display: -webkit-flex;
+    height:215px;
+    -webkit-flex-direction:column;
+    -webkit-justify-content: space-between;
+}
+.y-axis li,.x-axis li{
+    font-weight:bold;
+    line-height:1;
+    text-align:center
+}
+.num{
+    font-size:11px;
+    color:#fff
+}
+</style>
+</head>
+<body>
+<div class="graph_area">
+    <ul class="graph">
+        <li class="bar" style="height: 50%;"><span class="num">50</span></li>
+        <li class="bar" style="height: 85%"><span class="num">85</span></li>
+        <li class="bar" style="height: 35%;"><span class="num">35</span></li>
+        <li class="bar" style="height: 7%;"><span class="num">7</span></li>
+        <li class="bar" style="height: 80%;"><span class="num">80</span></li>
+        <li class="bar" style="height: 32%;"><span class="num">32</span></li>
+        <li class="bar" style="height: 100%;"><span class="num">100</span></li>
+    </ul>
+    <ul class="x-axis"><li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li></ul>
+    <ul class="y-axis"><li>100</li><li>80</li><li>60</li><li>40</li><li>20</li><li>0</li></ul>
+</div>
+ </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
+<title>-webkit-background-clip으로 분포도 그리기</title>
+<style>
+.map_graph,
+.map_graph span{
+	background:url("img/sp_map.png") no-repeat;
+	background-size:322px 534px;
+	-webkit-background-size:322px 534px
+}
+.map_graph{
+	position:relative;
+	width:320px;
+	height:453px;
+	margin:10px 0 20px 40px;
+	background-position:0 -80px
+}
+.map_graph span{
+	position:absolute;
+	display:block;
+	width:26px;
+	height:26px;
+	padding:10px;
+	border:14px solid rgba(0,0,0,0);
+	-webkit-border-radius:50%;
+	background-position:-12px -12px
+	}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="map_graph">
+		<span></span>
+	</div>
+</div>
+</body>
+</html>

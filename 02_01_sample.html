@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<title>유리처럼 반사되는 순위 키워드 만들기</title>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+	.rangking{height:35px;padding:10px;border:10px solid #000;font-size:16px;line-height:16px;font-weight:bold;-webkit-box-reflect:below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.3, transparent), to(rgba(0,0,0,0.4)))}
+	.key{overflow:hidden}
+	.rolling{display: block;position:relative;padding: 9px 40px 9px 10px;color: #000;white-space: nowrap;-webkit-animation:movein ease 3s}
+	.num{display:inline-block;width:15px;height:15px;margin-right:5px;background:url(img/ico_rank.png) no-repeat;background-size:15px auto;-webkit-background-size:15px auto;text-indent:-999em;vertical-align:top}
+	.num2{background-position:0 -18px}
+	.num3{background-position:0 -36px}
+	.num4{background-position:0 -54px}
+	.num5{background-position:0 -72px}
+	.num6{background-position:0 -90px}
+	.num7{background-position:0 -108px}
+	.num8{background-position:0 -126px}
+	.num9{background-position:0 -144px}
+	.num10{background-position:0 -164px}
+	.txt{display: inline-block;overflow:hidden;max-width: 100%;text-overflow: ellipsis;vertical-align: top}
+	.ico_rangking{display:inline-block;width:15px;height:15px;background:url(img/ico_rank.png) no-repeat;background-size:15px auto;-webkit-background-size:15px auto;text-indent:-999em;vertical-align:top}
+	.up{background-position:50% -178px}
+	.down{background-position:50% -189px}
+	@-webkit-keyframes movein{
+		0%{
+		    bottom:-50px
+		}
+        30%{
+            bottom: 0px
+        }
+        80% {
+            bottom : 0px
+        }
+		100%{
+		    bottom: 50px
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="rangking" id="_box">
+		<div class="key"><span class="rolling"><em class="num num1">1</em><span class="txt">바람부는 날에는 김치전에 막걸리를 먹고 싶은 이유는?</span><em class="ico_rangking up">순위 오름</em></span></div>
+	</div>
+	<script type="text/javascript">
+
+        $(document).ready(function(){
+            var template = "";
+            var index = 1;
+            var array = [];
+            var data = [
+                { message : "바람부는 날에는 김치전에 막걸리를 먹고 싶은 이유는?", change : "up" },
+                { message : "비가오면 생각나는 그사람", change : "down" },
+                { message : "깔깔깔 웃으면 복이와요", change : "down" },
+                { message : "늑대소녀", change : "up" },
+                { message : "당신을 사랑해", change : "up" },
+                { message : "가족의 역사", change : "up" },
+                { message : "현대사회에서 필요한 인간은 누구인가?", change : "down" },
+                { message : "미래에 뜨는 직업 BEST 10 도전해보자", change : "down" },
+                { message : "50년후에 내모습은", change : "up" },
+                { message : "사후 인터넷 묘 만들기", change : "up" }
+            ];
+
+            array.push('<div class="key">');
+            array.push('<span class="word rolling">');
+            array.push('<em class="num num%-RANK%">%-RANK%</em>');
+            array.push('<span class="txt">%-MESSAGE%</span>');
+            array.push('<em class="ico_rangking %-CHANGE%">순위 %-RANK_UPDOWN%</em>');
+            array.push('</span>');
+            array.push('</div>');
+
+            template = array.join("");
+
+            setInterval(function(){
+                var html = template.replace("%-RANK%", (++index) + "")
+                                    .replace("%-MESSAGE%", data[index].message)
+                                    .replace("%-CHANGE%", data[index].change)
+                                    .replace("%-RANK_UPDOWN%", data[index].change === "up" ? "오름" : "내림");
+
+                $("#_box").html(html);
+
+                if(index === data.length - 1){
+                    index = 0;
+                }
+
+            }, 2600);
+        });
+	</script>
+</body>
+</html>

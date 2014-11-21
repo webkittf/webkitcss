@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
+        <style type="text/css">
+          /* Common */
+			body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select {
+				margin: 0;
+				padding: 0;
+				font-family: Helvetica
+			}
+			body, input, textarea, select, button, table {
+				font-size: 14px;
+				line-height: 1.25em
+			}
+			body {
+				position: relative;
+				-webkit-text-size-adjust: none;
+				background:url(./img/wood-bg.jpg);
+			}
+			img, fieldset {border: 0}
+			ul, ol {list-style: none}
+			em, address {font-style: normal}
+			a {text-decoration: none}
+			table {border-collapse: collapse}
+			hr {display: none !important}
+
+            .polaroid {
+                max-width: 500px;
+                margin: 0 auto
+            }
+            .polaroid:after {
+                content: '';
+                display: block;
+                clear: both
+            }
+            .polaroid li {
+                display:inline-block;
+                margin: 20px;
+                z-index: 5
+            }
+            .polaroid li a {
+                display: block;
+                position: relative;
+                padding: 10px 10px 20px 10px;
+                background-color: #fff;
+                text-decoration: none;
+                z-index: 0
+            }
+            .polaroid li a img {
+                display: block;
+                width: 95px
+            }
+            .polaroid li a span {
+                display: block;
+                padding-top: 10px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 24px;
+                color: #000
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul class="polaroid">
+                <li><a href="#"> <img src="./img/0.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/2.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/3.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/4.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/5.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/6.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/7.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/8.jpg"> <span>title</span> </a></li>
+                <li><a href="#"> <img src="./img/9.jpg"> <span>title</span> </a></li>
+            </ul>
+        </div>
+    </body>
+</html>
