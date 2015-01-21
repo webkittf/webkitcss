@@ -7,81 +7,83 @@
 <style>
 /* Common */
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
-margin:0;
-padding:0;
-font-family:Helvetica
+	margin:0;
+	padding:0;
+	font-family:Helvetica;
 }
 body,input,textarea,select,button,table{
-font-size:14px;
-line-height:1.25em
+	font-size:14px;
+	line-height:1.25em;
 }
 body{
-position:relative;
--webkit-text-size-adjust:none
+	position:relative;
+	-webkit-text-size-adjust:none;
 }
 img,fieldset{
-border:0
+	border:0;
 }
 ul,ol{
-list-style:none
+	list-style:none;
 }
 em,address{
-font-style:normal
+	font-style:normal;
 }
 a{
-text-decoration:none
+	text-decoration:none;
 }
 table{
-border-collapse:collapse
+	border-collapse:collapse;
 }
 hr{
-display:none !important
+	display:none !important;
 }
 
 /* layout */
-html,body{height:100%}
+html,body{
+	height:100%;
+}
 .my{
-display:-webkit-box;
--webkit-box-orient:vertical;
--webkit-box-align:center;
-position:absolute;
-top:0;
-width:100%;
-padding:10px 0;
-z-index:1;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-box-align:center;
+	position:absolute;
+	top:0;
+	width:100%;
+	padding:10px 0;
+	z-index:1;
 }
 .my .profile_picture{
-width:105px;
-height:105px;
--webkit-mask-image:url(img/profile_mask.png);
--webkit-mask-size:105px
+	width:105px;
+	height:105px;
+	-webkit-mask-image:url(img/profile_mask.png);
+	-webkit-mask-size:105px;
 }
 .my h1 .name,
 .my h1 .nickname{
-display:block;
-text-align:center;
+	display:block;
+	text-align:center;
 }
 .my h1 .name{
-font-size:18px;
-line-height:17px;
-margin-bottom:5px
+	font-size:18px;
+	line-height:17px;
+	margin-bottom:5px;
 }
 .my h1 .nickname{
-font-size:13px;
-font-weight:normal;
+	font-size:13px;
+	font-weight:normal;
 }
 .info {
-text-align:center
+	text-align:center;
 }
 .info h2{
-padding:180px 0 10px
+	padding:180px 0 10px;
 }
 
 @media only screen and (orientation:landscape){
 	.my{
-	height:150px;
-	-webkit-box-orient:horizontal;
-	-webkit-box-pack:center
+		height:150px;
+		-webkit-box-orient:horizontal;
+		-webkit-box-pack:center;
 	}
 }
 </style>

@@ -2,64 +2,64 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
 <title>화면 크기에 반응하는 배경 이미지와 메뉴 만들기 </title>
 <style>
 /* Common */
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
-margin:0;
-padding:0;
-font-family:Helvetica
+	margin:0;
+	padding:0;
+	font-family:Helvetica;
 }
 body,input,textarea,select,button,table{
-font-size:14px;
-line-height:1.25em
+	font-size:14px;
+	line-height:1.25em;
 }
 body{
-position:relative;
--webkit-text-size-adjust:none
+	position:relative;
+	-webkit-text-size-adjust:none;
 }
 img,fieldset{
-border:0
+	border:0;
 }
 ul,ol{
-list-style:none
+	list-style:none;
 }
 em,address{
-font-style:normal
+	font-style:normal;
 }
 a{
-text-decoration:none
+	text-decoration:none;
 }
 table{
-border-collapse:collapse
+	border-collapse:collapse;
 }
 hr{
-display:none !important
+	display:none !important;
 }
 /* layout */
 html,body,.wrap{height:100%}
 .wrap{
-	background:url(https://raw.githubusercontent.com/webkittf/webkitcss/master/img/cosmos.jpg) 50% 50% no-repeat;
-	-webkit-background-size:cover
+	background:url(img/cosmos.jpg) 50% 50% no-repeat;
+	-webkit-background-size:cover;
 }
 /* menu */
 ul{
 	display:-webkit-box;
 	overflow:hidden;
-	border:1px solid #999
+	border:1px solid #999;
 }
 li{
 	text-align:center;
 	border-right:1px solid #999;
 	-webkit-box-flex:1;
-	background:-webkit-gradient(linear,0 0,0 100%,from(#e2e2e2),to(#fff));
+	background:-webkit-linear-gradient(top,#e2e2e2,#fff);
 }
 a{
 	display:block;
 	height:100%;
 	padding:10px;
-	color:#333
+	color:#333;
 }
 a::before{
 	content:'';
@@ -69,8 +69,8 @@ a::before{
 	width:14px;
 	height:14px;
 	margin-right:4px;
-	background:url(https://raw.githubusercontent.com/webkittf/webkitcss/master/img/flower.png) no-repeat;
-	-webkit-background-size:14px
+	background:url(img/flower.png) no-repeat;
+	-webkit-background-size:14px;
 }
 </style>
 </head>

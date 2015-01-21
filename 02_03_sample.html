@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
 <title>-webkit-background-clip으로 분포도 그리기</title>
 <style>
 
 .map_graph,.map_graph span{
-	background:url('img/sp_map.png') -9999px -9999px no-repeat;
+	background:url("img/sp_map.png") -9999px -9999px no-repeat;
+	-webkit-background-size:322px 534px;
 	background-size:322px 534px;
-	-webkit-background-size:322px 534px}
-
+	}
 .map_graph{
 	position:relative;
 	width:320px;
 	height:453px;
 	margin:10px 0 20px 40px;
 	display:inline-block;
-	background-position:0 -80px
+	background-position:0 -80px;
 }
-
 .map_graph span{
 	position:absolute;
 	display:block;
@@ -28,32 +27,89 @@
 	padding:10px;
 	border:14px solid rgba(0,0,0,0);
 	-webkit-border-radius:50%;
-	background-position:-12px -12px
+	background-position:-12px -12px;
 }
-
-.map_graph .diff{ background-position:-97px -12px}
-
-.map_graph .region1{top:58px;left:60px}
-.map_graph .region2{top:257px;left:181px}
-.map_graph .region3{top:173px;left:139px}
-.map_graph .region4{top:63px;left:6px}
-.map_graph .region5{top:254px;left:13px}
-.map_graph .region6{top:161px;left:85px}
-.map_graph .region7{top:208px;left:215px}
-.map_graph .region8{top:97px;left:55px;z-index:10}
-.map_graph .region9{top:20px;left:106px}
-.map_graph .region10{top:60px;left:168px}
-.map_graph .region11{top:107px;left:120px}
-.map_graph .region12{top:122px;left:13px}
-.map_graph .region13{top:206px;left:44px}
-.map_graph .region14{top:303px;left:51px}
-.map_graph .region15{top:120px;left:188px}
-.map_graph .region16{top:247px;left:112px}
-.map_graph .region17{top:398px;left:34px}
-
-.map_graph .size1{-webkit-background-clip:border}
-.map_graph .size2{-webkit-background-clip:padding}
-.map_graph .size3{-webkit-background-clip:content}
+.map_graph .diff{
+	background-position:-97px -12px;
+}
+.map_graph .region1{
+	top:58px;
+	left:60px;
+	}
+.map_graph .region2{
+	top:257px;
+	left:181px;
+}
+.map_graph .region3{
+	top:173px;
+	left:139px;
+}
+.map_graph .region4{
+	top:63px;
+	left:6px;
+}
+.map_graph .region5{
+	top:254px;
+	left:13px;
+}
+.map_graph .region6{
+	top:161px;
+	left:85px;
+}
+.map_graph .region7{
+	top:208px;
+	left:215px;
+}
+.map_graph .region8{
+	top:97px;
+	left:55px;
+	z-index:10;
+}
+.map_graph .region9{
+	top:20px;
+	left:106px;
+}
+.map_graph .region10{
+	top:60px;
+	left:168px;
+}
+.map_graph .region11{
+	top:107px;
+	left:120px;
+}
+.map_graph .region12{
+	top:122px;
+	left:13px;
+}
+.map_graph .region13{
+	top:206px;
+	left:44px;
+}
+.map_graph .region14{
+	top:303px;
+	left:51px;
+}
+.map_graph .region15{
+	top:120px;
+	left:188px;
+}
+.map_graph .region16{
+	top:247px;
+	left:112px;
+}
+.map_graph .region17{
+	top:398px;
+	left:34px;
+}
+.map_graph .size1{
+	-webkit-background-clip:border;
+}
+.map_graph .size2{
+	-webkit-background-clip:padding;
+}
+.map_graph .size3{
+	-webkit-background-clip:content;
+}
 </style>
 </head>
 <body>

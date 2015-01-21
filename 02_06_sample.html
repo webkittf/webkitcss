@@ -3,43 +3,133 @@
 <head>
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densitydpi=medium-dpi">
 <title>데이터 테이블의 소팅기능 만들기</title>
 <style>
-/* common */
-html,body{height:100%}
-body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
-body,input,textarea,select,button{font-size:14px;line-height:1.25em}
-img,fieldset{border:0}
-ul,ol,li{list-style:none}
-
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{
+	margin:0;
+	padding:0;
+	font-family:Helvetica;
+}
+body,input,textarea,select,button,table{
+	font-size:14px;
+	line-height:1.25em;
+}
+body{
+	position:relative;
+	-webkit-text-size-adjust:none;
+}
+img,fieldset{
+	border:0;
+}
+ul,ol{
+	list-style:none;
+}
+em,address{
+	font-style:normal;
+}
+a{
+	text-decoration:none;
+}
+table{
+	border-collapse:collapse;
+}
+hr{
+	display:none !important;
+}
+html,body{
+	height:100%;
+}
 /* Chinese restaurant menu table */
-.floating_menu{z-index:10;position:fixed;width:100%;padding-top:5px;background:#fff}
-.floating_menu button{padding:5px}
-.menu_table{position:relative;height:36px;margin-top:5px;margin-bottom:-1px;background:#03091C;font-weight:bold;color:#FCFEFF;text-align:center}
-.menu_table a{color:#D7FFDD}
-.menu_data{padding-top:73px}
-.menu_data a{color:#506dff}
-.menu_data li{position:relative;height:36px;margin-bottom:-1px;background:##D0D1D4;text-align:center}
-.menu_data li a{color:inherit;text-decoration:none}
+.floating_menu{
+	z-index:10;
+	position:fixed;
+	width:100%;
+	padding-top:5px;
+	background:#fff;
+}
+.floating_menu button{
+	padding:5px;
+}
+.menu_table{
+	position:relative;
+	height:36px;
+	margin-top:5px;
+	margin-bottom:-1px;
+	background:#03091C;
+	font-weight:bold;
+	color:#FCFEFF;
+	text-align:center;
+}
+.menu_table a{
+	color:#D7FFDD;
+}
+.menu_data{
+	padding-top:73px;
+}
+.menu_data a{
+	color:#506dff;
+}
+.menu_data li{
+	position:relative;
+	height:36px;
+	margin-bottom:-1px;
+	background:#D0D1D4;
+	text-align:center;
+}
+.menu_data li a{
+	color:inherit;
+	text-decoration:none;
+}
 .num,
 .category,
 .menu,
 .prize,
 .time,
-.top{position:absolute;top:0;height:24px;padding-top:10px;border:1px solid #f2f2f2}
-.num{top:0;left:0;width:40px}
-.category{left:41px;width:180px}
-.top{right:0;width:50px}
-.time{right:51px;width:80px}
-.prize{right:132px;width:80px}
-.menu{position:static;display:block;padding:10px 212px 0 232px;text-align:left}
-.menu_table .menu{text-align:center}
+.top{
+	position:absolute;
+	top:0;
+	height:24px;
+	padding-top:10px;
+	border:1px solid #f2f2f2;
+}
+.num{
+	top:0;
+	left:0;
+	width:40px;
+}
+.category{
+	left:41px;
+	width:180px;
+}
+.top{
+	right:0;
+	width:50px;
+}
+.time{
+	right:51px;
+	width:80px;
+}
+.prize{
+	right:132px;
+	width:80px;
+}
+.menu{
+	position:static;
+	display:block;
+	padding:10px 212px 0 232px;
+	text-align:left;
+}
+.menu_table .menu{
+	text-align:center;
+}
 
 /* sort option */
 .menu_data{
   display:-webkit-flex;
   -webkit-flex-direction:column;
-}{{{
+}
 </style>
 </head>
 <body>
